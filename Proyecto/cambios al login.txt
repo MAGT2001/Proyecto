@@ -1,0 +1,63 @@
+Selección de Rol
+Este es un menú desplegable donde el usuario puede elegir entre dos roles: "Usuario" y "Administrador".
+
+LINEA DE CODIGO 14 AL 19 
+<label for="role">Selecciona tu rol:</label>
+                <select id="role" name="role" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="usuario">Usuario</option>
+                    <option value="administrador">Administrador</option>
+                </select><br>
+
+Mensajes de error
+Puedes agregar un área para mostrar mensajes de error en caso de que el inicio de sesión falle.
+
+LINEA DE CODIGO 21
+<div class="error-message" id="error-message" style="display:none;"></div>
+
+Luego, en tu script, puedes actualizar el contenido y mostrarlo según sea necesario.
+
+Recuperación de contraseña
+Considera añadir un enlace para la recuperación de contraseña.
+
+LINEA DE CODIGO 25 AL 27
+<div class="forgot-password">
+    <p><a href="recuperar_contrasena.html">¿Olvidaste tu contraseña?</a></p>
+</div>
+
+ Integración con backend
+Si tienes un backend, asegúrate de que el formulario esté correctamente configurado para enviar datos a tu servidor. Añade un atributo action y method.
+
+LINEA DE CODIGO 11
+<form class="login-form" action="tu_backend_endpoint" method="POST">
+
+CODIGO ORIGINAL
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login_register.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <form class="login-form">
+            <h2>Iniciar Sesión</h2>
+            <div class="form-group">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+			<div class="register-link">
+				<p>No tienes una cuenta? <a href="registro.html">Regístrate aquí</a></p>
+			</div>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+</body>
+</html>
+
